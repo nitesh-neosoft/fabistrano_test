@@ -15,7 +15,23 @@
 # def hello():
 #     print "Hello world!"
 
-from fabric.api import run
+
+from fabric.api import *
+
+env.hosts = ["webwerks@10.0.11.109"]
+# env.hosts = ["webwerks@206.183.111.25"]
+
+def mytask():
+	print "HHHHHHH"
+	# run('ls /var/')
+
 
 def hello(name="abcd"):
-    print "Hello %s" % (name)
+	run('rmdir -p /home/webwerks/pear2')
+# 	run("uptime")
+# 	print "HIIIII"
+    # print "Hello %s" % (name)https://github.com/nitesh-neosoft/fabistrano_test.git
+
+def remote_pull():
+	run('cd /home/webwerks/pear')
+	run('git clone https://github.com/nitesh-neosoft/fabistrano_test.git')

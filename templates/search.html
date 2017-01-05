@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Blogs</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<h1>Search Blog Entry</h1>
+	<form method="post" action="/search/">
+	{% csrf_token %}
+		<div>
+			<label for="s_start_date" class="col-sm-1 control-label">Start Time :</label>
+			<input type="datetime-local" name="s_start_date" value="{{st_time}}"/>
+		</div>
+		<div>
+			<label for ="s_end_date" class="col-sm-1 control">End Time :</label>
+			<input type="datetime-local" name="s_end_date" value="{{en_time}}"/>
+		</div>
+		<div>
+			<input type="submit" value="Search"/>
+			<a href="/">Back to Home</a>
+		</div>
+	</form>
+
+	{% for blog in filtered_blog_objs %}
+		<h3>{{ blog.title}}</h3>
+		<p>{{ blog.content }}</p>
+		<p>{{ blog.last_updated }}</p>
+	{% endfor %}
+
+</body>
+</html>

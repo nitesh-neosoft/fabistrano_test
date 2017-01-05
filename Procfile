@@ -1,0 +1,1 @@
+web: python manage.py collectstatic --noinput; gunicorn blongo_proj.wsgi 0.0.0.0:$PORT --log-file - 

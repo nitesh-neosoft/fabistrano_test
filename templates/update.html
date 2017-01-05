@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ </head>
+ <title>Update | Blog</title>
+ <body>
+ 	<!-- <h1> Update Blog Entry</h1> -->
+ 	<form method="POST" action="/update/" style="width:800px; margin: 0 auto">
+ 	{% csrf_token %}
+ 		<div>
+	 		<input type="hidden" name="u_id" value="{{u_blog_obj.id}}"/>
+	 	</div>
+	 	<div class="form-group" style="width:70%; margin:0 auto; padding: 20px 0px">
+	 		<label for="u_title">Title</label>
+	 		<input type="text" name="u_title" value="{{u_blog_obj.title}}"
+	 			class="form-control"/>
+	 	</div>
+	 	<div class="form-group" style="width:70%; margin:0 auto; padding: 15px 0px">
+	 		<label for="u_content">Description</label>
+	 		<textarea name="u_content" rows=5 cols=50 class="form-control">{{u_blog_obj.content}}</textarea>
+	 	</div>
+	 	<div class="form-group" style="width:70%; margin:0 auto;">
+	 		<span>
+		 		<b>Last Updated on: </b>{{ u_blog_obj.last_updated }}
+		 		<span style="padding:15px 130px">
+			 		<input type="submit" class="btn btn-primary" value="Update"/>
+			 		<a href="/" class="btn btn-default" style="background-color: lightgrey">Cancel</a>
+			 	</span>
+		 	</span>
+	 	</div>
+ 	</form>
+ </body>
+</html>

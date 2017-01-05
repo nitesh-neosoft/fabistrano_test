@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ </head>
+	<title>Create | Blog</title>
+</head>
+<body>
+	<!-- <div style="width: 800px; margin:0 auto">
+		<form method="POST" action="/create/">
+			{% csrf_token %}
+			<div class="form-group" style="width:800px; margin:0 auto;padding: 20px 0px">
+				<label for="title" style="width: 70%">Title</label>
+				<input type="text" name="title" class="form-control"
+				 style="width: 60%" placeholder="Post Title">
+			</div>
+
+			<div class="form-group" style="width:800px; margin:0 auto;padding: 15px 0px">
+				<label for="content" class="control-label">Description</label>
+				<textarea name="content" class="form-control" placeholder="Enter Description for Post"
+				 rows="5" cols="50" style="width: 60%">
+				</textarea>
+			</div>
+			<div style="width:480px; margin:0 auto;">
+				<input type="submit" class="btn btn-primary" value="Add Post">
+				<a href="/" class="btn btn-default" style="background-color: lightgrey"><b>Back</b></a>
+			</div>
+		</form>
+	</div> -->
+		<form method="POST" action="/create/" style="width: 800px; margin:0 auto">
+			{% csrf_token %}
+			<div class="form-group" style="width:70%; margin:0 auto;padding: 20px 0px">
+				<label for="title">Title</label>
+				<input type="text" name="title" class="form-control" placeholder="Post Title">
+			</div>
+
+			<div class="form-group" style="width: 70%; margin:0 auto;padding: 15px 0px">
+				<label for="content">Description</label>
+				<textarea name="content" class="form-control" placeholder="Enter Description for Post"
+				 rows="5" cols="50">
+				</textarea>
+			</div>
+			<div class="form-group" style="width:30%; margin-left: 500px;">
+				<input type="submit" class="btn btn-primary" value="Add Post">
+				<a href="/" class="btn btn-default" style="background-color: lightgrey"><b>Back</b></a>
+			</div>
+		</form>
+</body>
+</html>

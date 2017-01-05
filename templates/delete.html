@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ </head>
+ <title>Delete | Blog</title>
+<body> -->
+	<!-- <h1>Delete Blog Entry</h1> -->
+	<!-- <form method="post" action="/delete/">
+	{% csrf_token %}
+		<div>
+			<input type="hidden" name="delete_id" value="{{d_blog_obj.id}}"/>
+		</div>
+		<div>
+			<p>Are you Sure you want to delete blog <b>"{{ d_blog_obj.title }}"</b>?</p>
+		</div>
+		<div>
+			<input type="submit" value="Delete"/>
+			<a href="/">Cancel</a>
+		</div>
+	</form>
+</body>
+</html> --><!-- 
+{% extends "index.html" %}
+
+{% block content %}
+
+<h1>Delete Post</h1>
+
+<p>Are you sure you want to delete the Post {{ blog }}?</p>
+
+<form action="{% url 'post_delete' blog.id %}" method="POST">
+  {% csrf_token %}
+
+  <input type="submit" value="Yes, delete." />
+  <a href="/">No, cancel.</a>
+</form>
+
+{% endblock %} -->

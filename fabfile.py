@@ -35,3 +35,6 @@ def hello(name="abcd"):
 def remote_pull():
 	run('cd /home/webwerks/pear')
 	run('git clone https://github.com/nitesh-neosoft/fabistrano_test.git')
+
+def new_check():
+	print "TESTTTT"

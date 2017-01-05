@@ -36,5 +36,13 @@ def remote_pull():
 	run('cd /home/webwerks/pear')
 	run('git clone https://github.com/nitesh-neosoft/fabistrano_test.git')
 
+def pull_remote_test():
+	code_dir = '/home/webwerks/fabistrano_test'
+	with cd(code_dir):
+		run('git pull')
+	# run('cd /home/webwerks/fabistrano_test')
+	# run('ls')
+	# run('git pull')
+
 def new_check():
 	print "TESTTTT"
